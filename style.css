@@ -28,18 +28,24 @@ body {
     justify-content: space-between;
     background-color: #1f2023;
     color: #fff;
+    overflow: scroll;
+    overflow: auto;
 }
 
 .css-code {
     justify-content: space-between;
     background-color: #1f2023;
     color: #fff;
+    overflow: scroll;
+    overflow: auto;
 }
 
 .js-code {
     justify-content: space-between;
     background-color: #1f2023;
     color: #fff;
+    overflow: scroll;
+    overflow: auto;
 }
 
 .editor {

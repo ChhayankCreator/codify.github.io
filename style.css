@@ -24,6 +24,24 @@ body {
     cursor: pointer;
 }
 
+.html-code {
+    justify-content: space-between;
+    background-color: #1f2023;
+    color: #fff;
+}
+
+.css-code {
+    justify-content: space-between;
+    background-color: #1f2023;
+    color: #fff;
+}
+
+.js-code {
+    justify-content: space-between;
+    background-color: #1f2023;
+    color: #fff;
+}
+
 .editor {
     width: 100%;
     height: calc(100vh);
@@ -51,4 +69,8 @@ body {
     height: 100%;
     border: none;
     outline: none;
+}
+
+.CodeMirror {
+    height: auto;
 }

@@ -1,15 +1,25 @@
-const htmlEditor = CpdeMirror(document.querySelector(".editor .code .html-code"), {
+const htmlEditor = CodeMirror(document.querySelector(".editor .code .html-code"), {
     lineNumbers: true,
-    tabsize: 4,
+    tabSize: 4,
     mode: "xml"
 });
-const cssEditor = CpdeMirror(document.querySelector(".editor .code .css-code"), {
+const cssEditor = CodeMirror(document.querySelector(".editor .code .css-code"), {
     lineNumbers: true,
-    tabsize: 4,
+    tabSize: 4,
     mode: "css"
 });
-const jsEditor = CpdeMirror(document.querySelector(".editor .code .js-code"), {
+const jsEditor = CodeMirror(document.querySelector(".editor .code .js-code"), {
     lineNumbers: true,
-    tabsize: 4,
+    tabSize: 4,
     mode: "javascript"
+});
+document.querySelector("#run-button").addEventListener("click", function() {
+    let htmlCode = htmlEditor.getValue();
+    let cssCode = "<style>" + cssEditor.getValue() + "</style>";
+    let jsCode = "<scri" + "pt>" + jsEditor.getValue() + "</scri" + "pt>";
+    let previewWindow = document.querySelector("#preview-window").contentWindow.document;
+    previewWindow.open();
+    previewWindow.write(htmlCode + cssCode + jsCode);
+    previewWindow.close();
+
 });
